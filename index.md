@@ -1,4 +1,4 @@
-# 🎵 Arduino Distance Sensor Theremin
+#  Arduino Distance Sensor Theremin
 
 **An interactive sound device controlled by hand proximity**[cite: 1]
 
@@ -22,7 +22,7 @@ This project builds on my experience with **analog input** (potentiometer practi
 
 ## Design Process[cite: 1]
 
-### 🔍 Step 1: Research & Resources[cite: 1]
+###  Step 1: Research & Resources[cite: 1]
 
 I started with basic melody code from the [Arduino tone() Tutorial](https://www.arduino.cc/en/Tutorial/BuiltInExamples/toneMelody) and used AI assistance to generate the "Twinkle Twinkle Little Star" sequence as a proof-of-concept for audio output[cite: 1].
 
@@ -31,7 +31,7 @@ For the distance sensor, I researched the **HC-SR04 ultrasonic sensor**:[cite: 1
 - **Tutorial Reference:** Arduino Project Hub examples[cite: 1]
 - **Key Learning:** How ultrasonic timing works (measuring echo delay)[cite: 1]
 
-### 🛠️ Step 2: Troubleshooting & Iteration[cite: 1]
+###  Step 2: Troubleshooting & Iteration[cite: 1]
 
 **Problem #1: Noisy Sensor Readings**[cite: 1]
 
@@ -58,7 +58,7 @@ The frequency mapping `map(distance, 5, 30, 2000, 200)` was too narrow and cause
 - Distance 5-30 cm → Frequency 200-2000 Hz (musical range)[cite: 1]
 - Added clamping: `if (frequency < 100) frequency = 100;`[cite: 1]
 
-### 🔌 Step 3: Circuit Assembly[cite: 1]
+###  Step 3: Circuit Assembly[cite: 1]
 
 **Final Working Circuit:**[cite: 1]
 
@@ -89,7 +89,7 @@ The frequency mapping `map(distance, 5, 30, 2000, 200)` was too narrow and cause
 6. Distance mapped to frequency: closer = higher pitch[cite: 1]
 7. `tone()` plays frequency through buzzer[cite: 1]
 
-### 💻 Step 4: Code[cite: 1]
+###  Step 4: Code[cite: 1]
 
 **[Download the full Arduino sketch →](./distance_sensor_theremin.ino)**[cite: 1]
 
@@ -222,13 +222,13 @@ Distance = (time × speed) / 2
 
 ### Strengths vs. Weaknesses[cite: 1]
 
-**✅ Why ultrasonic is great:**[cite: 1]
+** Why ultrasonic is great:**[cite: 1]
 - Works in darkness (unlike infrared)[cite: 1]
 - Works with any solid object[cite: 1]
 - No battery drain on the object being sensed[cite: 1]
 - Simple timing-based calculation[cite: 1]
 
-**⚠️ Limitations:**[cite: 1]
+** Limitations:**[cite: 1]
 - Soft materials (foam, fabric) absorb sound → unreliable[cite: 1]
 - Ambient noise can interfere[cite: 1]
 - Needs ~60cm minimum for sensor + measurement[cite: 1]
@@ -259,7 +259,7 @@ if (distance > 2 && distance < 400) {
 
 ---
 
-## 🤝 Peer Support: Learning Through Collaboration[cite: 1]
+##  Peer Support: Learning Through Collaboration[cite: 1]
 
 ### The Problem[cite: 1]
 
@@ -322,18 +322,18 @@ This experience taught me that the most valuable help isn't always a finished an
 
 ---
 
-## 💡 Use-Case Reflection: Real-World Applications[cite: 1]
+##  Use-Case Reflection: Real-World Applications[cite: 1]
 
 ### Who Could Benefit?[cite: 1]
 
-#### 🎓 **Music Education**[cite: 1]
+####  **Music Education**[cite: 1]
 A music teacher could use this in class to show students:[cite: 1]
 - How synthesizers work (electronic sound generation)[cite: 1]
 - Sensor-to-sound mapping (input → processing → output)[cite: 1]
 - Interactive learning without complex musical training[cite: 1]
 Students can create sounds they've never made before — engaging and visual[cite: 1]
 
-#### ♿ **Accessibility & Adaptive Interfaces**[cite: 1]
+####  **Accessibility & Adaptive Interfaces**[cite: 1]
 For people with limited hand dexterity or finger mobility:[cite: 1]
 - No small buttons to press → hand proximity instead[cite: 1]
 - Continuous, natural control → no discrete "clicks"[cite: 1]
@@ -391,7 +391,7 @@ This isn't just for this project — it's true for *any* sensor-based system[cit
 
 ---
 
-## 🚀 Future Enhancements[cite: 1]
+##  Future Enhancements[cite: 1]
 
 If I had more time, I'd implement:[cite: 1]
 
@@ -421,7 +421,7 @@ If I had more time, I'd implement:[cite: 1]
 
 ---
 
-## 📚 Resources & References[cite: 1]
+##  Resources & References[cite: 1]
 
 **Components:**[cite: 1]
 - [Arduino Uno](https://store.arduino.cc/products/arduino-uno-rev3) — Microcontroller board[cite: 1]
@@ -452,7 +452,7 @@ If I had more time, I'd implement:[cite: 1]
 
 ---
 
-**Project completed:** September 2026 | **Course:** Arduino Unit 1 Summative | **Status:** ✅ Working & Documented[cite: 1]
+**Project completed:** September 2026 | **Course:** Arduino Unit 1 Summative | **Status:**  Working & Documented[cite: 1]
 
 **Questions or feedback?** Feel free to review the code or reach out![cite: 1]
 
