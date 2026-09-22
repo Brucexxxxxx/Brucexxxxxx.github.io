@@ -455,3 +455,5 @@ If I had more time, I'd implement:[cite: 1]
 **Project completed:** September 2026 | **Course:** Arduino Unit 1 Summative | **Status:** ✅ Working & Documented[cite: 1]
 
 **Questions or feedback?** Feel free to review the code or reach out![cite: 1]
+
+https://github.com/user-attachments/assets/0e359895-faa8-40a3-9352-67aac5c6939f
