@@ -1,0 +1,75 @@
+# Innovator Journal – Entry 01: Building the First 3D Scanner Prototype
+
+**Project:** 3D Scanner
+**Entry:** 1 of a series
+**Date:** September 30, 2026
+**Status:** Hardware assembled and rotating; data collection still to come
+
+---
+
+## 1. Goal for This Entry
+
+Get the core hardware of a basic 3D scanner working: a distance sensor that can **sweep in a circle** under motor control, so that later it can measure the distance to an object at many angles and turn those measurements into 3D points.
+
+> Wire the Arduino, ultrasonic sensor, and stepper motor together and confirm the motor can rotate the sensor.
+
+## 2. Components Used
+
+| Component | Purpose |
+|---|---|
+| Arduino UNO | Runs the code and talks to my computer over USB |
+| HC-SR04 ultrasonic sensor | Measures distance by timing a sound pulse's echo |
+| Stepper motor (geared, 5-wire) | Rotates the sensor in precise, repeatable steps |
+| Stepper driver board (ULN2003-style, with 4 indicator LEDs) | Lets the Arduino drive the motor's coils safely |
+| Breadboard | Shared power rail for the motor driver |
+| Jumper wires | Connections |
+
+## 3. Process
+
+### Step 1 – Planning the concept
+A scanner needs **a way to measure distance** and **a way to know the angle** of each measurement. The ultrasonic sensor gives distance. The stepper motor gives angle, because each step is a known fraction of a rotation. Mounting the sensor on the motor shaft lets every reading be paired with an angle.
+
+### Step 2 – Wiring the circuit
+- The **stepper driver** takes four control signals (IN1–IN4) from Arduino digital pins, plus power and ground.
+- The **ultrasonic sensor** uses four pins: VCC, Trig, Echo, and GND. Trig and Echo connect to Arduino digital pins.
+- Power and ground for the driver run through the **breadboard rails**, which keeps the motor's power draw off the Arduino pins.
+- I used different wire colors for different jobs so I could trace problems quickly.
+
+### Step 3 – Mounting the sensor on the motor
+I attached the HC-SR04 on top of the motor's shaft so it sweeps around when the motor turns. For now it is only attached for testing; a more secure mount is something I'll improve later.
+
+### Step 4 – Testing rotation
+I powered the board over USB and ran a test sketch (`code/scanner_test/scanner_test.ino`) that steps the motor and prints a distance reading at each step. The driver board's **LEDs light up** in sequence as each coil is energized, which confirms the signals are reaching the motor.
+
+## 4. What Worked
+
+- The stepper motor rotates the sensor smoothly.
+- The driver board LEDs confirm the motor signals are being sent.
+- The Arduino powers up and communicates over USB.
+- Color-coded wiring made debugging straightforward.
+
+## 5. Challenges and Problems
+
+- **Wire clutter.** With around ten jumper wires in a small space, it is easy to cross or loosen one, and wires tug on the sensor as it rotates.
+- **Cable twisting.** The sensor's wires wind up if it turns a full 360° repeatedly, so I'll need to limit the sweep angle or manage the wires.
+- **Sensor mounting.** The sensor isn't firmly fixed yet, so its aim can shift and add error.
+- **Ultrasonic limits.** HC-SR04 readings can be noisy and the beam is wide, so fine detail on small objects may be hard to capture.
+
+## 6. What I Learned
+
+- A stepper motor suits scanning because angle is controlled by *counting steps*.
+- Motor drivers exist because Arduino pins can't power a motor directly.
+- Color-coding and organizing wires saves time.
+- Building in small, testable pieces (power, then motor, then sensor) makes problems easier to find.
+
+## 7. Next Steps
+
+1. Log distance readings for each motor step and view them in the Serial Monitor.
+2. Calibrate the sensor against known distances to measure accuracy.
+3. Build a sturdier mount and decide how to handle the wires.
+4. Add a second axis (tilt or turntable) so the scanner captures height as well as angle.
+5. Convert (angle, distance) readings into X/Y/Z points and plot them.
+
+## 8. Reflection
+
+Seeing the sensor turn on command was the first moment this project felt real. It is a small step, but data collection, point clouds, and accuracy improvements all depend on this foundation working. In the next entry I'll focus on capturing measurements.
