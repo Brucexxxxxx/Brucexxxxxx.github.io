@@ -1,4 +1,4 @@
-# 📓 Innovator Journal: Code Autopsy
+#  Innovator Journal: Code Autopsy
 **Project:** HTML5 Canvas Game Autopsy  
 **Game Name:** *Flappy Webby*  
 **File:** `flappy_webby.html`  
