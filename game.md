@@ -3,7 +3,6 @@
 **Game Name:** *Flappy Webby*  
 **File:** `flappy_webby.html`  
 
----
 
 ## 1. Project Overview & Setup
 
@@ -31,6 +30,7 @@ For this activity, I generated a single-file HTML5/JavaScript game called **Flap
 </body>
 </html>
 Markdown
+
 ## 2. Code Autopsy Worksheet
 
 ### The Canvas
