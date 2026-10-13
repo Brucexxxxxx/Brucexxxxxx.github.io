@@ -72,7 +72,7 @@ let pipeWidth = 60;
 let pipeGap = 160;
 let topPipeHeight = 180;
 let pipeSpeed = 3;
-
+```
 let score = 0;
 let gameOver = false;
 ### The Game Loop
@@ -85,6 +85,7 @@ let gameOver = false;
   4. Recycle pipe & increment score when pipe moves off-screen
   5. Check collision conditions
   6. Re-render visual frame via `draw()`
+
 
 ```javascript
 function update() {
@@ -117,6 +118,7 @@ function update() {
       }
     }
   });
+```
 # Mechanism
 Pressing Space while active sets `velocity = -8` (launching the bird upward). Pressing Space during a `gameOver` state calls `resetGame()`, resetting positions and scores.
 
@@ -140,6 +142,7 @@ if (birdX + birdRadius > pipeX && birdX - birdRadius < pipeX + pipeWidth) {
     gameOver = true;
   }
 }
+```
 ### Scoring
 * **Score Variable:** `let score = 0;`
 * **Trigger Line:** Incremented inside `update()` when the trailing edge of a pipe clears the left edge of the screen:
