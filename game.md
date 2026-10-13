@@ -1,19 +1,19 @@
 #  Innovator Journal: Code Autopsy
 **Project:** HTML5 Canvas Game Autopsy  
-**Game Name:** *Flappy Webby*  
-**File:** `flappy_webby.html`  
+**Game Name:** *Space Webby*  
+**File:** `space_webby.html`  
 
 
 ## 1. Project Overview & Setup
 
-For this activity, I generated a single-file HTML5/JavaScript game called **Flappy Webby** using the HTML5 `<canvas>` element. The game features a simple physics-based bird maneuvering through obstacles set against a sunset backdrop.
+For this activity, I generated a single-file HTML5/JavaScript game called **Space Webby** using the HTML5 `<canvas>` element. The game features a simple physics-based bird maneuvering through obstacles set against a sunset backdrop.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Flappy Webby</title>
+  <title>Space Webby</title>
   <style>
     body {
       background-color: #2b1f3d;
