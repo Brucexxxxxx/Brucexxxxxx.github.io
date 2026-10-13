@@ -8,7 +8,7 @@
 
 For this activity, I generated a single-file HTML5/JavaScript game called **Flappy Webby** using the HTML5 `<canvas>` element. The game features a simple physics-based bird maneuvering through obstacles set against a sunset backdrop.
 
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +30,7 @@ For this activity, I generated a single-file HTML5/JavaScript game called **Flap
 </body>
 </html>
 Markdown
-
+```
 ## 2. Code Autopsy Worksheet
 
 ### The Canvas
